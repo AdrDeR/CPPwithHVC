@@ -1,5 +1,5 @@
 # CPPwithHVC
-How to use C++ code with Embedded HVC4223F HV Controller
+How to use C++ code with Embedded HVC4223F HV Microcontroller
 This is just the first test how to work with github and to create branches.
 The CPP project for HVC 4223F using the KEIL MDK IDE is useful to understand how to use C++ with this kind of embedded controller.
 
@@ -11,7 +11,7 @@ Where? Into  under project options "c/c++" in field  misc controls (=compiler op
 NVIC and Classes. What must be considered?
 ==========================================
 
-IMPROTANT: Bei Aktivierung der C++ Compiler Option --cpp11 wird der IRQ Handler nicht mehr gelinkt. Erst durch Nutzung des extern "C" statemments wird die IRQHandler Adresse wieder verlinkt. 
+IMPORTANT Note: By activating the C++ Compiler Option --cpp11 t IRQ Handler was not linkes anymore. After usoing the extern "C" statemments the IRQHandler Adresse is linked again.  
 
 extern "C" void TIM0_IRQHandler() {
     	uint32_t tmp_pending_flags_u32;		
@@ -22,8 +22,11 @@ extern "C" void TIM0_IRQHandler() {
 
 Die Funktion TIM0_IRQHandler() wird aufgerufen über einen Funktionspointer der in der Klasse Timer deklariert wird!
  
-  void (*Timer0Interrupt)(void);   // Function pointer -> This pointer will be redirected to TIM0_IRQHandler() !
-  
+#  void (*Timer0Interrupt)(void);   // Function pointer -> This pointer will be redirected to TIM0_IRQHandler() !
+ 
+ 
+ 
+ 
 Timer0Interrupt wird dann "umgebogen" auf TIM0_IRQHandler()!
 
 See also under this reference: 
