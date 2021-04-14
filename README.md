@@ -1,7 +1,6 @@
 # CPPwithHVC
 How to use C++ code with Embedded HVC4223F HV Microcontroller
-This is just the first test how to work with github and to create branches.
-The CPP project for HVC 4223F using the KEIL MDK IDE is useful to understand how to use C++ with this kind of embedded controller.
+The CPP project for HVC 4223F using the KEIL MDK IDE is useful to understand how to use C++ with this kind of embedded micro controller.
 
 Using C++ with classes and KEIL MDK:
 =====================================
